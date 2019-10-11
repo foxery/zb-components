@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "commonjs",
+        "target": "ES6",
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictNullChecks": true,
+        "jsx": "react",
+        "typeRoots": ["node_modules/@types"],
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop":true
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
