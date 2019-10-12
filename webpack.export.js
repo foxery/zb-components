@@ -1,17 +1,17 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
+const entry = require("./exportEntry.json");
 const tsImportPlugin = require("ts-import-plugin");
 
-module.exports = {
-  entry: "./src/index.tsx",
-  output: {
-    filename: "bundle.js",
-    path: __dirname + "/dist"
-  },
+console.log(entry);
 
-  // Enable sourcemaps for debugging webpack's output.
-  devtool: "source-map",
+module.exports = {
+  entry: entry,
+  output: {
+    libraryTarget: "umd",
+    filename: "[name].js",
+    path: __dirname + "/lib/components"
+  },
 
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
@@ -56,26 +56,21 @@ module.exports = {
         use: ["style-loader", "css-loader"]
       }
       // {
-      //   test: /\.(js|vue|ts|tsx|jsx)$/,
-      //   enforce: "pre",
-      //   exclude: /node_modules/,
-      //   loader: "eslint-loader",
-      //   options: {
-      //     fix: false,
-      //     extensions: [".js", ".jsx", ".vue", ".ts", ".tsx"],
-      //     cache: false,
-      //     emitWarning: true,
-      //     emitError: false
-      //   }
+      //     test: /\.(js|vue|ts|tsx|jsx)$/,
+      //     enforce: 'pre',
+      //     exclude: /node_modules/,
+      //     loader: 'eslint-loader',
+      //     options: {
+      //         fix: false,
+      //         extensions: ['.js', '.jsx', '.vue', '.ts', '.tsx'],
+      //         cache: false,
+      //         emitWarning: true,
+      //         emitError: false
+      //     }
       // }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "./index.html")
-    }),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  plugins: []
   // When importing a module whose path matches one of the following, just
   // assume a corresponding global variable exists and use that instead.
   // This is important because it allows us to avoid bundling all of our

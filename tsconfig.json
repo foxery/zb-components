@@ -2,20 +2,21 @@
     "compilerOptions": {
         "outDir": "./dist/",
         "sourceMap": true,
-        "lib": ["es5", "es6", "dom"],
         "noImplicitAny": true,
         "module": "commonjs",
-        "target": "ES6",
+        "target": "es6",
         "jsx": "react",
-        "typeRoots": ["node_modules/@types"],
         "allowSyntheticDefaultImports": true,
         "esModuleInterop":true,
         "declaration": true,
+        "typeRoots": [ "../../typings", "../../node_modules/@types"]
     },
     "include": [
         "./src/**/*"
     ],
     "exclude": [
-        "node_modules",
+        "../../node_modules",
+        "../../typings"
     ]
+
 }

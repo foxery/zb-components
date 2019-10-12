@@ -1,0 +1,4 @@
+{
+"index": "./src/exports.tsx",
+"TextPopconfirm": "./src/components/TextPopconfirm/index"
+}
