@@ -1,19 +1,22 @@
 {
   "name": "zb-components",
-  "version": "1.0.5",
+  "version": "1.0.10",
   "description": "浙北组件",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development",
-    "transpile": "babel src -d dist --copy-files",
-    "prepublishOnly": "npm run transpile"
+    "start": "webpack-dev-server --mode development --Open",
+    "export": "bash ./initexport.sh && webpack --config webpack.export.js --mode=production",
+    "build": "webpack --config webpack.config.js --mode=production",
+    "prepublishOnly": "npm run build"
   },
   "author": "kiddzz",
   "license": "ISC",
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
     "antd": "^3.23.6",
-    "awesome-typescript-loader": "^5.2.1",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
@@ -25,6 +28,8 @@
     "react-dom": "^16.10.2",
     "source-map-loader": "^0.2.4",
     "style-loader": "^1.0.0",
+    "styled-components": "^4.4.0",
+    "ts-import-plugin": "^1.6.1",
     "ts-loader": "^6.2.0",
     "typescript": "^3.6.4",
     "webpack": "^4.41.0",

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Popconfirm } from "antd";
 
 interface Iprops {
-  onConfirm: () => void;
+  onConfirm?: () => void;
   title?: string;
   text?: string;
   placement?: any;
