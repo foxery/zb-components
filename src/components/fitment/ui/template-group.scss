@@ -1,0 +1,21 @@
+.ryu-template{
+    margin-top:16px;
+    margin-bottom:16px;
+
+    &-group {
+        padding-left: 8px !important;
+        font-size: 12px;
+        font-weight: bold;
+        color:black;
+    }
+
+    &-item {
+        text-align: center;
+        margin-top: 16px;
+        cursor: pointer;
+    }
+
+    &-hidden {
+        display: none !important;
+    }
+}

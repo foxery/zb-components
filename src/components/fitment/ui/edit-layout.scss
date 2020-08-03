@@ -1,0 +1,44 @@
+.ryu-edit-layout {
+  background: white;
+  &-item {
+    margin-bottom: 16px;
+  }
+
+  &-item-title-prefix {
+    width: 4px;
+    height: 20px;
+    background: #4990e2;
+    float: left;
+  }
+
+  &-item-title {
+    height: 10px;
+    float: left;
+    font-size: 12px;
+    color: #646464;
+    padding-left: 10px;
+  }
+
+  &-item-separator {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 4px;
+    background: white;
+  }
+
+  &-clear {
+    clear: both;
+  }
+
+  & :global(.ant-btn-primary) {
+    background: #4990e2;
+    border-color: #4990e2;
+    height: 30px;
+    border-radius: 0px;
+  }
+
+  & :global(.ant-btn) {
+    height: 30px;
+    border-radius: 0px;
+  }
+}

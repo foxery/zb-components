@@ -1,0 +1,14 @@
+.img-plugin-default {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: rgb(62, 62, 62);
+  padding-bottom: 12px;
+  img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+}

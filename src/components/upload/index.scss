@@ -1,0 +1,13 @@
+.ant-upload-picture-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ant-upload-list-picture-card-container{
+  .ant-upload-list-item-done:first-child div{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+}

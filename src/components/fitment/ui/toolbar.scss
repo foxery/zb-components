@@ -1,0 +1,28 @@
+.ryu-toolbar {
+    height: 50px;
+    width: 100%;
+    background: white;
+    border-bottom:1px solid #f6f6f6;
+    
+    &::after {
+        content: ' ';
+        display: block;
+        clear: both;
+    }
+
+    & > div {
+        float: left;
+        width: 50%;
+        height: 50px;
+        line-height: 50px;
+        vertical-align: middle;
+    }
+
+    & > div:first-child {
+        text-align: left;
+    }
+
+    & > div:last-child {
+        text-align: right;
+    }
+}

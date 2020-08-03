@@ -1,0 +1,34 @@
+.image-edit-item {
+  position: relative;
+  background: #f0f0f0;
+  max-width: 550px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+  }
+  .zc-item-item {
+    display: flex;
+    align-items: center;
+    > span {
+      display: inline-block;
+      width: 70px;
+    }
+  }
+  .delete-icon {
+    position: absolute;
+    top: -15px;
+    right: -25px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: none;
+  }
+  &:hover .delete-icon {
+    display: block;
+  }
+}
