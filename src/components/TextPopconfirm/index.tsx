@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Popconfirm } from "antd";
+import 'antd/es/popconfirm/style/css'
 
 interface Iprops {
   onConfirm?: () => void;

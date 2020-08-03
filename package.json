@@ -1,14 +1,16 @@
 {
   "name": "zb-components",
-  "version": "1.0.11",
+  "version": "1.1.17",
   "description": "浙北组件",
-  "main": "lib/components/index.js",
+  "main": "lib/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --Open",
-    "export": "bash ./initexport.sh && webpack --config webpack.export.js --mode=production",
     "build": "webpack --config webpack.config.js --mode=production",
-    "prepublishOnly": "npm run build"
+    "build:lib": "npm run clean && tsc -p . || true && npm run scss",
+    "clean": "rimraf ./lib && mkdir lib",
+    "scss": "node-sass -r src -o lib",
+    "prepublishOnly": "npm run build:lib"
   },
   "author": "kiddzz",
   "license": "ISC",
@@ -16,32 +18,24 @@
     "lib"
   ],
   "devDependencies": {
+    "@types/react": "^16.9.1",
+    "@types/react-dom": "^16.8.5",
     "@types/styled-components": "^4.1.18",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
-    "@types/react": "^16.9.1",
-    "@types/react-dom": "^16.8.5",
     "antd": "^3.23.6",
+    "axios": "^0.19.2",
     "eslint": "^6.1.0",
-    "eslint-loader": "^2.2.1",
     "eslint-plugin-react": "^7.14.3",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^3.2.0",
-    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.13.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "source-map-loader": "^0.2.4",
-    "style-loader": "^1.0.0",
     "styled-components": "^4.4.0",
-    "ts-import-plugin": "^1.6.1",
-    "ts-loader": "^6.2.0",
-    "typescript": "^3.6.4",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.2"
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "moment": "^2.27.0",
+    "qs": "^6.9.4",
+    "react-color": "^2.18.1"
   }
 }
