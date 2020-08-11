@@ -106,7 +106,7 @@ export default class ImagePlugin extends Component<Iprops> {
     return (
       <Fragment>
         {urlList.length > 0 ? (
-          <div style={{ width: '100%' }}>
+          <div style={{ width: '100%', fontSize: 0 }}>
             {urlList.map(item => (
               <div
                 onClick={() => this.onImgClick(item)}

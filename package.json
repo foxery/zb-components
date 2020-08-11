@@ -1,6 +1,6 @@
 {
   "name": "zb-components",
-  "version": "1.1.17",
+  "version": "1.1.19",
   "description": "浙北组件",
   "main": "lib/index",
   "scripts": {

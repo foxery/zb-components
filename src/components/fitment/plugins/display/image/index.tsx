@@ -20,7 +20,7 @@ export default class ImagePlugin extends Component<Iprops> {
     return (
       <Fragment>
         {urlList.length > 0 ? (
-          <div style={{ width: '100%' }}>
+          <div style={{ width: '100%', fontSize: 0 }}>
             {urlList.map(url => (
               <div onClick={() => this.onImgClick(url)} style={{ width: 100 / arrType + '%', display: 'inline-block' }}>
                 <img style={{ width: '100%', height: 'auto' }} src={url} />
